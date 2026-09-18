@@ -38,11 +38,7 @@ fn main() {
 
         for entry in matches {
             let timestamp = entry.timestamp.as_deref().unwrap_or("no-timestamp");
-            println!(
-                "[{timestamp}] [{}] {}",
-                entry.level.as_str(),
-                entry.message
-            );
+            println!("[{timestamp}] [{}] {}", entry.level.as_str(), entry.message);
         }
 
         return;
