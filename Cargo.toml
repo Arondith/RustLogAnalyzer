@@ -1,0 +1,8 @@
+[package]
+name = "rust-log-analyzer"
+version = "0.1.0"
+edition = "2021"
+description = "A command-line log analysis tool for parsing, filtering, and summarizing application logs."
+license = "MIT"
+
+[dependencies]
