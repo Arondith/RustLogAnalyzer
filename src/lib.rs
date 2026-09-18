@@ -92,7 +92,10 @@ pub fn summarize<'a>(entries: impl IntoIterator<Item = &'a LogEntry>) -> LogSumm
 }
 
 pub fn filter_by_level<'a>(entries: &'a [LogEntry], level: &LogLevel) -> Vec<&'a LogEntry> {
-    entries.iter().filter(|entry| &entry.level == level).collect()
+    entries
+        .iter()
+        .filter(|entry| &entry.level == level)
+        .collect()
 }
 
 pub fn parse_contents(contents: &str) -> Vec<LogEntry> {
@@ -118,10 +121,7 @@ mod tests {
         let entry = parse_line("legacy service started").unwrap();
 
         assert_eq!(entry.timestamp, None);
-        assert_eq!(
-            entry.level,
-            LogLevel::Unknown("UNSTRUCTURED".to_string())
-        );
+        assert_eq!(entry.level, LogLevel::Unknown("UNSTRUCTURED".to_string()));
         assert_eq!(entry.message, "legacy service started");
     }
 
