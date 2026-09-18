@@ -1,0 +1,7 @@
+[2026-09-18T08:40:01Z] [INFO] Application started
+[2026-09-18T08:40:02Z] [DEBUG] Loading configuration
+[2026-09-18T08:40:05Z] [INFO] Connected to database
+[2026-09-18T08:41:12Z] [WARN] Request latency exceeded 500ms
+[2026-09-18T08:42:11Z] [ERROR] Database connection failed
+[2026-09-18T08:42:15Z] [INFO] Retrying database connection
+[2026-09-18T08:42:17Z] [ERROR] Retry failed
