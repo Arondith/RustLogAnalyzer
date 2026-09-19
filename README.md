@@ -73,6 +73,20 @@ Filter by severity:
 cargo run -- examples/sample.log --level ERROR
 ```
 
+### CLI behavior and exit codes
+
+The command expects a log-file path and accepts one optional severity filter:
+
+```text
+RustLogAnalyzer <log-file> [--level <TRACE|DEBUG|INFO|WARN|ERROR>]
+```
+
+- Exit code `0`: analysis completed successfully.
+- Exit code `1`: the requested log file could not be read.
+- Exit code `2`: required arguments are missing or the argument shape is invalid.
+
+For example, supplying an unsupported extra argument prints the usage message and exits with code `2`. Severity names should use one of the levels shown above.
+
 ## Test
 
 ```bash
